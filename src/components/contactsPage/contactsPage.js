@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect} from 'react';
 
 import ContactForm from '../contactFrom/contactForm';
+import TileList from '../tileList/TileList';
 
 
 const ContactsPage = (props) => {
@@ -14,7 +15,7 @@ const ContactsPage = (props) => {
     const [email, setEmail] = useState('');
     const [duplicate, setDuplicate] = useState(false);
 
-    const hadndleSubmit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
 
         if (!duplicate) {
@@ -26,6 +27,16 @@ const ContactsPage = (props) => {
             setEmail('');
         }
     };
+
+    useEffect(() => {
+        for (const contact of contacts) {
+            if (contact.name === name) {
+                setDuplicate(true);
+                return;
+            }
+            setDuplicate(false);
+        }
+    });
 
 
     return (

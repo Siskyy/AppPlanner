@@ -10,7 +10,12 @@ const ContactForm = ({
     handleSubmit
 }) => {
     return (
-        ContactForm
+        <form onSubmit={handleSubmit}>
+            <input value={name}/>
+            <input value={phone}/>
+            <input value={email}/>
+            <input type="submit"/>
+        </form>
     );
 };
 
