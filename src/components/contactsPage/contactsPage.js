@@ -1,6 +1,8 @@
 import React from 'react';
 import { useState, useEffect} from 'react';
 
+import ContactForm from '../contactFrom/contactForm';
+
 
 const ContactsPage = (props) => {
 
