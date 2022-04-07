@@ -5,7 +5,9 @@ import Tile from '../tile/Tile';
 const TileList = ({arr}) => {
   return (
     <div>
-      { arr.map( (item, index) =>  <Tile value={value} key={index} />) }
+      { arr.map( (item, index) =>  (
+      <Tile value={item} key={index} />
+      ))}
     </div>
   );
 };

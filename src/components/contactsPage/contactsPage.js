@@ -29,20 +29,30 @@ const ContactsPage = (props) => {
     };
 
     useEffect(() => {
-        for (const contact of contacts) {
-            if (contact.name === name) {
-                setDuplicate(true);
-                return;
-            }
+        
+        const checkIfDuplicate = () => {
+            const findItem = contacts.find((contact) => contact.name === name);
+        if (findItem !== undefined) {
+            return true;
+        }
+        return false;
+        };
+
+        if (checkIfDuplicate()) {
+            setDuplicate(true);
+        } else {
             setDuplicate(false);
         }
-    });
+    }, [name, contacts, duplicate]);
 
 
     return (
-        <div>
+       <section>
+           <h2>
 
-        </div>
+           </h2>
+           <ContactForm />
+       </section>
     );
 };
 
