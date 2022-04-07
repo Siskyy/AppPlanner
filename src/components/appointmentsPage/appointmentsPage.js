@@ -20,9 +20,21 @@ const AppointmentsPage = ({appointments, addAppointment, contacts}) => {
     }
 
     return (
-        <div>
-            
-        </div>
+        <section>
+            <h2>Add Appointment</h2>
+            <AppointmentFrom 
+                contacts={contacts}
+                title={title}
+                setTitle={setTitle}
+                contact={contact}
+                setContact={setContact}
+                date={date}
+                setDate={setDate}
+                time={time}
+                setTime={setTime}
+                handleSubmit={handleSubmit}
+            />
+        </section>
     );
 };
 
