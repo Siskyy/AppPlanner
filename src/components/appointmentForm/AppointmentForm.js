@@ -19,6 +19,10 @@ export const AppointmentForm = ({
     return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
   };
 
+  const getContactNames = () => {
+    return contacts.map((contact) => contact.name);
+  }
+
   return (
     <form onSubmit={handleSubmit}>
       <input 

@@ -47,6 +47,7 @@ const ContactsPage = (props) => {
 
 
     return (
+       <>
        <section>
            <h2>Add Contact</h2>
            <ContactForm 
@@ -59,6 +60,12 @@ const ContactsPage = (props) => {
             handleSubmit={handleSubmit}
            />
        </section>
+       <br />
+       <section>
+           <h2>Contacts</h2>
+            <TileList tiles={contacts} />
+       </section>
+       </>
     );
 };
 
