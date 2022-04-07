@@ -39,19 +39,10 @@ function App() {
             <Redirect to={ROUTES.CONTACTS} />
           </Route>
           <Route path={ROUTES.CONTACTS}>
-             
-            <ContactsPage 
-              addContacts={addContact}
-              contacts={contacts}
-            />
+             <ContactsPage addContacts={addContact} contacts={contacts} />
           </Route>
           <Route path={ROUTES.APPOINTMENTS}>
-            
-            <AppointmentsPage 
-              addAppointment={addAppointment}
-              appointments={appointments}
-              contacts={contacts}
-            />
+            <AppointmentsPage addAppointment={addAppointment} appointments={appointments} contacts={contacts} />
           </Route>
         </Switch>
       </main>

@@ -22,7 +22,7 @@ const AppointmentsPage = ({appointments, addAppointment, contacts}) => {
     return (
         <section>
             <h2>Add Appointment</h2>
-            <AppointmentFrom 
+            <AppointmentForm 
                 contacts={contacts}
                 title={title}
                 setTitle={setTitle}
